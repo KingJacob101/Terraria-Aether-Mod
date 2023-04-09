@@ -1,0 +1,3 @@
+displayName = Aether Mod
+author = The Aether Mod Team
+version = 0.1
