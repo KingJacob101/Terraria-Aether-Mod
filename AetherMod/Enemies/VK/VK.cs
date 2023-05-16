@@ -56,7 +56,7 @@ namespace AetherMod.Enemies.VK
                     new List<IBestiaryInfoElement>
                     {
                     new MoonLordPortraitBackgroundProviderBestiaryInfoElement(),
-                    new FlavorTextBestiaryInfoElement("Mods.Aether.Bestiary.VultureKing")
+                    new FlavorTextBestiaryInfoElement("Mods.AetherMod.Bestiary.VultureKing")
                     }
                 );
             }
