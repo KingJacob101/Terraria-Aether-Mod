@@ -6,10 +6,6 @@ namespace AetherMod.Items.Dev
 {
 	public class VoidReaper : ModItem
 	{
-		public override void SetStaticDefaults()
-		{
-			Tooltip.SetDefault("It can tare rifts in space-time itself.");
-		}
 
 		public override void SetDefaults()
 		{
@@ -20,10 +16,10 @@ namespace AetherMod.Items.Dev
 			Item.height = 48;
 			Item.useTime = 24;
 			Item.useAnimation = 24;
-			Item.useStyle = 3;
+			Item.useStyle = ItemUseStyleID.Thrust;
 			Item.knockBack = 8;
 			Item.value = 1000000;
-			Item.rare = 2;
+			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 		}

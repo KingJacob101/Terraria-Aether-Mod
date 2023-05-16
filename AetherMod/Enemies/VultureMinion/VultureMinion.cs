@@ -1,16 +1,10 @@
 using Terraria;
 using Terraria.ModLoader;
-using Terraria.ID;
-using Terraria.GameContent.ItemDropRules;
 
 namespace AetherMod.Enemies.VultureMinion
 {
     public class VultureMinion : ModNPC
     {
-        public override void SetStaticDefaults()
-        {
-            DisplayName.SetDefault("Vulture King's Minion");
-        }
 
         public override void SetDefaults()
         {

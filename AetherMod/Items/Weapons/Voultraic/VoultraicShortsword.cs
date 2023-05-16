@@ -6,11 +6,6 @@ namespace AetherMod.Items.Weapons.Voultraic
 {
 	public class VoultraicShortsword : ModItem
 	{
-		public override void SetStaticDefaults()
-		{
-			//Tooltip.SetDefault("");
-		}
-
 		public override void SetDefaults()
 		{
 			Item.damage = 31;
@@ -20,21 +15,21 @@ namespace AetherMod.Items.Weapons.Voultraic
 			Item.height = 48;
 			Item.useTime = 24;
 			Item.useAnimation = 24;
-			Item.useStyle = 3;
+			Item.useStyle = ItemUseStyleID.Thrust;
 			Item.knockBack = 5;
 			Item.value = 1750;
-			Item.rare = 2;
+			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = false;
 		}
 		
-	public override void AddRecipes()
+		public override void AddRecipes()
 		{
-			Recipe recipe = CreateRecipe();
-			recipe.AddIngredient(ModContent.ItemType<Items.Voultraic.VoultraicCell>(), 2);
-			recipe.AddIngredient(ModContent.ItemType<Items.Voultraic.VoultraicFeather>(), 4);
-			recipe.AddTile(TileID.Anvils);
-			recipe.Register();
+			CreateRecipe()
+			.AddIngredient(ModContent.ItemType<Items.Voultraic.VoultraicCell>(), 2)
+			.AddIngredient(ModContent.ItemType<Items.Voultraic.VoultraicFeather>(), 4)
+			.AddTile(TileID.Anvils)
+			.Register();
 		}
 
 	}
