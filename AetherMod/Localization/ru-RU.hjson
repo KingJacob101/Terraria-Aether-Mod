@@ -28,7 +28,12 @@ Mods: {
 		}
 
 		NPCs: {
-			VK.DisplayName: Король Стервятников
+			VK: {
+				DisplayName: Король Стервятников
+				// hardattack: was in range within Vulture King's Stomp
+				// reflect: took 150% of his damage back (?)
+			}
+
 			VultureMinion.DisplayName: Стервятник-Миньон
 		}
 

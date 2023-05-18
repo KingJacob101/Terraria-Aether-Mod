@@ -28,7 +28,12 @@ Mods: {
 		}
 
 		NPCs: {
-			VK.DisplayName: Vulture King
+			VK: {
+				DisplayName: Vulture King
+				hardattack: was in range within Vulture King's Stomp
+				reflect: took 150% of his damage back (?)
+			}
+
 			VultureMinion.DisplayName: Vulture Minion
 		}
 
