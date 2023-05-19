@@ -1,0 +1,42 @@
+Mods: {
+	AetherMod: {
+		Items: {
+			VoidReaper: {
+				DisplayName: Void Reaper
+				Tooltip: ""
+			}
+
+			VoultraicCell: {
+				DisplayName: Voultraic Cell
+				Tooltip: ""
+			}
+
+			VoultraicFeather: {
+				DisplayName: Voultraic Feather
+				Tooltip: ""
+			}
+
+			VoultraicPistol: {
+				DisplayName: Voultraic Pistol
+				Tooltip: ""
+			}
+
+			VoultraicShortsword: {
+				DisplayName: Voultraic Shortsword
+				Tooltip: ""
+			}
+		}
+
+		NPCs: {
+			VK: {
+				DisplayName: Vulture King
+				hardattack: was in range within Vulture King's Stomp
+				reflect: took 150% of his damage back (?)
+			}
+
+			VultureMinion.DisplayName: Vulture Minion
+		}
+
+		Bestiary.VultureKing: Here will be bestiary description for Vulture King
+	}
+}

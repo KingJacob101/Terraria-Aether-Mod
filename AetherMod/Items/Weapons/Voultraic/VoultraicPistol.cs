@@ -6,10 +6,6 @@ namespace AetherMod.Items.Weapons.Voultraic
 {
 	public class VoultraicPistol : ModItem
 	{
-		public override void SetStaticDefaults()
-		{
-			//Tooltip.SetDefault("");
-		}
 
 		public override void SetDefaults()
 		{
@@ -20,24 +16,24 @@ namespace AetherMod.Items.Weapons.Voultraic
 			Item.height = 48;
 			Item.useTime = 24;
 			Item.useAnimation = 24;
-			Item.useStyle = 5;
+			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.knockBack = 2;
 			Item.value = 1750;
-			Item.rare = 2;
+			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.Item11;
 			Item.autoReuse = true;
 			Item.useAmmo = AmmoID.Bullet;
-			Item.shoot = 10;
+			Item.shoot = ProjectileID.PurificationPowder;
 			Item.shootSpeed = 10f;
 		}
 		
-	public override void AddRecipes()
+		public override void AddRecipes()
 		{
-			Recipe recipe = CreateRecipe();
-			recipe.AddIngredient(ModContent.ItemType<Items.Voultraic.VoultraicCell>(), 2);
-			recipe.AddIngredient(ModContent.ItemType<Items.Voultraic.VoultraicFeather>(), 4);
-			recipe.AddTile(TileID.Anvils);
-			recipe.Register();
+			CreateRecipe()
+			.AddIngredient(ModContent.ItemType<Items.Voultraic.VoultraicCell>(), 2)
+			.AddIngredient(ModContent.ItemType<Items.Voultraic.VoultraicFeather>(), 4)
+			.AddTile(TileID.Anvils)
+			.Register();
 		}
 
 	}

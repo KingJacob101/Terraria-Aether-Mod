@@ -1,0 +1,42 @@
+Mods: {
+	AetherMod: {
+		Items: {
+			VoidReaper: {
+				DisplayName: Жнец пустоты
+				Tooltip: ""
+			}
+
+			VoultraicCell: {
+				DisplayName: Клетка Стервятника
+				Tooltip: ""
+			}
+
+			VoultraicFeather: {
+				DisplayName: Перо Стервятника
+				Tooltip: ""
+			}
+
+			VoultraicPistol: {
+				DisplayName: Пистолет Стервятника
+				Tooltip: ""
+			}
+
+			VoultraicShortsword: {
+				DisplayName: Кинжал Стервятника
+				Tooltip: ""
+			}
+		}
+
+		NPCs: {
+			VK: {
+				DisplayName: Король Стервятников
+				// hardattack: was in range within Vulture King's Stomp
+				// reflect: took 150% of his damage back (?)
+			}
+
+			VultureMinion.DisplayName: Стервятник-Миньон
+		}
+
+		Bestiary.VultureKing: Здесь когда-нибудь будет описание Короля Стервятников
+	}
+}
