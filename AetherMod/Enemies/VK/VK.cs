@@ -7,6 +7,7 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.GameContent.Bestiary;
+using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -22,7 +23,7 @@ namespace AetherMod.Enemies.VK
         {
             NPCID.Sets.MPAllowedEnemies[Type] = true;
             NPCDebuffImmunityData debuffData = new NPCDebuffImmunityData
-            { SpecificallyImmuneTo = new int[] { BuffID.Poisoned, BuffID.Confused } };
+            { SpecificallyImmuneTo = new int[] { BuffID.Electrified, BuffID.Confused,BuffID.Poisoned } };
 
             NPCID.Sets.DebuffImmunitySets.Add(Type, debuffData);
             //NPCID.Sets.NPCBestiaryDrawModifiers drawModifiers = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
@@ -37,8 +38,8 @@ namespace AetherMod.Enemies.VK
         {
             NPC.width = 118;
             NPC.height = 78;
-            NPC.damage = 30;
-            NPC.defense = 4;
+            NPC.damage = 25;
+            NPC.defense = 5;
             NPC.lifeMax = 2000;
             NPC.value = 100000f;
             NPC.HitSound = SoundID.NPCHit4;
@@ -78,10 +79,11 @@ namespace AetherMod.Enemies.VK
                 }
             }
 
-        //public override void ModifyNPCLoot(NPCLoot npcLoot)
-        //{
-
-        //}
+        public override void ModifyNPCLoot(NPCLoot npcLoot)
+        {
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Items.Materials.Voultraic.VoultraicFeather>(),1,5,10));
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Items.Materials.Voultraic.VoultraicCell>(),1,5,10));
+        }
         public override void AI()
         {
             NPC.TargetClosest(true);
@@ -144,6 +146,7 @@ namespace AetherMod.Enemies.VK
                 else if ((double)NPC.ai[0] == 800)
                 {
                     //Dash into the player
+                    NPC.damage = 70;
                     float speed = 15f;
                     Vector2 vector = new Vector2(NPC.position.X + (float)NPC.width * 0.5f, NPC.position.Y + (float)NPC.height * 0.5f);
                     float x = player.position.X + (float)(player.width / 2) - vector.X;
@@ -157,6 +160,7 @@ namespace AetherMod.Enemies.VK
                 else if ((double)NPC.ai[0] == 845)
                 {
                     //Dash backwards
+                    NPC.damage = 25;
                     float speed = 15f;
                     Vector2 vector = new Vector2(NPC.position.X + (float)NPC.width * 0.5f, NPC.position.Y + (float)NPC.height * 0.5f);
                     float x = player.position.X + (float)(player.width / 2) - vector.X;
@@ -170,6 +174,7 @@ namespace AetherMod.Enemies.VK
                 else if ((double)NPC.ai[0] == 885)
                 {
                     ai = 0;
+                    
                 }
 
 
@@ -269,6 +274,7 @@ namespace AetherMod.Enemies.VK
                     else if ((double)NPC.ai[0] == 860)
                     {
                         //Dash into the ground
+                        NPC.damage = 70;
                         SoundEngine.PlaySound(SoundID.Roar, NPC.position);
                         NPC.velocity.X = 0f;
                         NPC.velocity.Y = 15f;
@@ -291,6 +297,7 @@ namespace AetherMod.Enemies.VK
                     else if ((double)NPC.ai[0] == 905)
                     {
                         //Dash backwards
+                        NPC.damage = 25;
                         NPC.velocity.Y = -15f;
                         NPC.netUpdate = true;
                     }

@@ -7,7 +7,7 @@ Mods: {
 			}
 
 			VoultraicCell: {
-				DisplayName: Voultraic Cell
+				DisplayName: Voultraic Power Cell
 				Tooltip: ""
 			}
 
@@ -18,11 +18,21 @@ Mods: {
 
 			VoultraicPistol: {
 				DisplayName: Voultraic Pistol
-				Tooltip: ""
+				Tooltip: Has 20% chance to shoot Voultraic Bolt
 			}
 
 			VoultraicShortsword: {
 				DisplayName: Voultraic Shortsword
+				Tooltip: ""
+			}
+
+			VoultraicChainsaw: {
+				DisplayName: Voultraic Chainsaw
+				Tooltip: ""
+			}
+
+			VoultraicSword: {
+				DisplayName: Voultraic Sword
 				Tooltip: ""
 			}
 		}
@@ -30,7 +40,7 @@ Mods: {
 		NPCs: {
 			VK: {
 				DisplayName: Vulture King
-				hardattack: was in range within Vulture King's Stomp
+				hardattack: didn't endured earthquake
 				reflect: took 150% of his damage back (?)
 			}
 
@@ -38,5 +48,10 @@ Mods: {
 		}
 
 		Bestiary.VultureKing: Here will be bestiary description for Vulture King
+
+		Projectiles: {
+			VoultraicBolt.DisplayName: Voultraic Bolt
+			VoultraicChainsawProj.DisplayName: Voultraic Chainsaw
+		}
 	}
 }
