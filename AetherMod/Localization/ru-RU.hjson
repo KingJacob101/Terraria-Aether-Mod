@@ -7,7 +7,7 @@ Mods: {
 			}
 
 			VoultraicCell: {
-				DisplayName: Клетка Стервятника
+				DisplayName: Энергетическая клетка Стервятника
 				Tooltip: ""
 			}
 
@@ -18,11 +18,21 @@ Mods: {
 
 			VoultraicPistol: {
 				DisplayName: Пистолет Стервятника
-				Tooltip: ""
+				Tooltip: 20% шанс выстрельнуть стервятническим снарядом
 			}
 
 			VoultraicShortsword: {
 				DisplayName: Кинжал Стервятника
+				Tooltip: ""
+			}
+
+			VoultraicChainsaw: {
+				DisplayName: Бензопила Стервятника
+				Tooltip: ""
+			}
+
+			VoultraicSword: {
+				DisplayName: Меч Стервятника
 				Tooltip: ""
 			}
 		}
@@ -30,13 +40,18 @@ Mods: {
 		NPCs: {
 			VK: {
 				DisplayName: Король Стервятников
-				// hardattack: was in range within Vulture King's Stomp
-				// reflect: took 150% of his damage back (?)
+				hardattack: не выдержал землетрясения
+				reflect: получил обратно 150% своего урона (?)
 			}
 
 			VultureMinion.DisplayName: Стервятник-Миньон
 		}
 
 		Bestiary.VultureKing: Здесь когда-нибудь будет описание Короля Стервятников
+
+		Projectiles: {
+			VoultraicBolt.DisplayName: Стервятнический снаряд
+			VoultraicChainsawProj.DisplayName: Бензопила Стервятника
+		}
 	}
 }

@@ -26,8 +26,8 @@ namespace AetherMod.Items.Weapons.Voultraic
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(ModContent.ItemType<Items.Voultraic.VoultraicCell>(), 2)
-			.AddIngredient(ModContent.ItemType<Items.Voultraic.VoultraicFeather>(), 4)
+			.AddIngredient(ModContent.ItemType<Materials.Voultraic.VoultraicCell>(), 2)
+			.AddIngredient(ModContent.ItemType<Materials.Voultraic.VoultraicFeather>(), 4)
 			.AddTile(TileID.Anvils)
 			.Register();
 		}
