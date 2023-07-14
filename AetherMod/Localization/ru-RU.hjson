@@ -35,6 +35,15 @@ Mods: {
 				DisplayName: Меч Стервятника
 				Tooltip: ""
 			}
+
+			BoulderCrusher: {
+				DisplayName: Крушащий валун
+				Tooltip:
+					'''
+					Призывает камни, которые будут вращаться вокруг вас, нанося урон попадающим в них врагам
+					Нажмите ПКМ, чтобы заставить их лететь в сторону курсора
+					'''
+			}
 		}
 
 		NPCs: {
@@ -52,6 +61,14 @@ Mods: {
 		Projectiles: {
 			VoultraicBolt.DisplayName: Стервятнический снаряд
 			VoultraicChainsawProj.DisplayName: Бензопила Стервятника
+			BoulderCrusherMinion.DisplayName: Крушащий Валун
+		}
+
+		Buffs: {
+			BoulderCrusherMinionBuff: {
+				DisplayName: Крушащий Валун
+				Description: Вас защищают летающие камни
+			}
 		}
 	}
 }
