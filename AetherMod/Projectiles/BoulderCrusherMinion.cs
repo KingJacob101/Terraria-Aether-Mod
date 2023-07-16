@@ -15,6 +15,7 @@ public class BoulderCrusherMinion : ModProjectile
     bool rush = false;
     int rushtimer = 0;
     Vector2 target;
+    bool randangle = false;
     public override void SetStaticDefaults()
     {
         Main.projFrames[Projectile.type] = 1;
@@ -35,6 +36,8 @@ public class BoulderCrusherMinion : ModProjectile
         Projectile.DamageType = DamageClass.Summon;
         Projectile.minionSlots = 1f;
         Projectile.penetrate = -1;
+        Projectile.usesLocalNPCImmunity = true;
+        Projectile.localNPCHitCooldown = 10;
     }
 
     public override bool? CanCutTiles()
@@ -60,7 +63,7 @@ public class BoulderCrusherMinion : ModProjectile
             return;
         }
 
-        if (Main.mouseRight && !Main.mouseRightRelease)
+        if (Main.mouseRight && !rush)
         {
             target = Main.MouseWorld;
             rush = true;
@@ -75,14 +78,12 @@ public class BoulderCrusherMinion : ModProjectile
         else
         {
             rushtimer++;
-            if (rushtimer > 25)
+            if (rushtimer > 40 || Projectile.position == target)
             {
-                Projectile.position.X = player.Center.X - (int)(Math.Cos(rad) * dist) - Projectile.width / 2;
-                Projectile.position.Y = player.Center.Y - (int)(Math.Sin(rad) * dist) - Projectile.height / 2;
-                rushtimer = 0;
-                rush = false;
+                Projectile.Kill();
             }
-            Projectile.velocity = (target - Projectile.Center).SafeNormalize(Vector2.Zero) * 25;
+            Projectile.velocity = (target - Projectile.Center).SafeNormalize(Vector2.Zero) * rushtimer;
+
             Projectile.rotation = Projectile.velocity.ToRotation();
         }
     }
