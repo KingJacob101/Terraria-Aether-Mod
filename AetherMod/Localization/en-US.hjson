@@ -35,6 +35,15 @@ Mods: {
 				DisplayName: Voultraic Sword
 				Tooltip: ""
 			}
+
+			BoulderCrusher: {
+				DisplayName: Boulder Crusher
+				Tooltip:
+					'''
+						Summons the rocks, which will orbit around you, damaging enemies that touch them
+						RMB to make rocks rush into your cursor position
+					'''
+			}
 		}
 
 		NPCs: {
@@ -52,6 +61,14 @@ Mods: {
 		Projectiles: {
 			VoultraicBolt.DisplayName: Voultraic Bolt
 			VoultraicChainsawProj.DisplayName: Voultraic Chainsaw
+			BoulderCrusherMinion.DisplayName: Boulder Crusher
+		}
+
+		Buffs: {
+			BoulderCrusherMinionBuff: {
+				DisplayName: Boulder Crusher Minion
+				Description: You are protected by flying rocks
+			}
 		}
 	}
 }
